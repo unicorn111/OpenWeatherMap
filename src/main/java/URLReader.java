@@ -1,3 +1,5 @@
+import org.json.JSONObject;
+
 import java.net.*;
 import java.io.*;
 
@@ -10,7 +12,8 @@ public class URLReader {
             line = inputLine;
         in.close();
     }
-    public String get_line(){
-        return line;
+    public JSONObject get_line(){
+        JSONObject jsonObj = new JSONObject(line);
+        return jsonObj;
     }
 }
